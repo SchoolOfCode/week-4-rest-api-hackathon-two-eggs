@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "uuid": "^11.0.3",
     "express": "^4.21.2"
   }
 }
