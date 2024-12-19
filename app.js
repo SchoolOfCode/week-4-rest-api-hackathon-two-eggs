@@ -8,6 +8,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
+// MVP 1
 app.get("/", async function (req, res) {
   try {
     const data = await returnAllData();
@@ -20,19 +21,18 @@ app.get("/", async function (req, res) {
   }
 });
 
+// MVP 2
 app.get("/:date", async function (req, res) {
   try {
-    const { targetYear } = req.params;
-    const data = await findPopulationByDate(targetYear);
-    res.json({
-      success: true,
-      payload: data,
-    });
+    const { date } = req.params;
+    const popByDate = await findPopulationByDate(date);
+    res.json(`The population in ${date} was: ${popByDate}`);
   } catch (error) {
     res.status(404).json({ error: "Could not retrieve data" });
   }
 });
 
+// Activates PORT on 3000.
 app.listen(PORT, function () {
   console.log(`Server is now listening on http://localhost:${PORT}`);
 });
