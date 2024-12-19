@@ -26,7 +26,10 @@ app.get("/:date", async function (req, res) {
   try {
     const { date } = req.params;
     const popByDate = await findPopulationByDate(date);
-    res.json(`The population in ${date} was: ${popByDate}`);
+    res.json({
+      success: true,
+      payload: `The population in ${date} was ${popByDate}`,
+    });
   } catch (error) {
     res.status(404).json({ error: "Could not retrieve data" });
   }
