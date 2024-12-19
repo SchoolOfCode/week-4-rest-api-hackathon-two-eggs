@@ -29,9 +29,16 @@ export async function createInfo(newInfo) {
   };
 
   dataArray = [...dataArray, newObject];
+  console.log("Data array:", dataArray);
 
   return newObject;
 }
+
+let newObj = {
+  "date": 2080,
+  "value": 20000000
+}
+console.log("Calling the function", createInfo(newObj));
 
 // export async function findPopulationByDate(targetYear) {
 //   let dateValue;
