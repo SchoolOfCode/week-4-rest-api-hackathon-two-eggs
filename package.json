@@ -1,0 +1,17 @@
+{
+  "name": "week-4-rest-api-hackathon-two-eggs",
+  "version": "1.0.0",
+  "description": "Problem: We need to design, develop, and demonstrate a fully functional REST API around a chosen theme.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
