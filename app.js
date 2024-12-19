@@ -8,7 +8,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.get("/helperFunctions.js", async function (req, res) {
+app.get("/", async function (req, res) {
   try {
     const data = await returnAllData();
     res.json({
