@@ -1,4 +1,4 @@
-[
+export const data = [
   {
     "indicator": {
       "id": "SP.POP.TOTL",

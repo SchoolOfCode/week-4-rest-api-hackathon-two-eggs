@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Problem: We need to design, develop, and demonstrate a fully functional REST API around a chosen theme.",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "dev": "node --watch app.js",
