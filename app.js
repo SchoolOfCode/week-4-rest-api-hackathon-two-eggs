@@ -20,11 +20,19 @@ app.get("/", async function (req, res) {
   }
 });
 
+app.get("/:date", async function (req, res) {
+  try {
+    const { targetYear } = req.params;
+    const data = await findPopulationByDate(targetYear);
+    res.json({
+      success: true,
+      payload: data,
+    });
+  } catch (error) {
+    res.status(404).json({ error: "Could not retrieve data" });
+  }
+});
+
 app.listen(PORT, function () {
   console.log(`Server is now listening on http://localhost:${PORT}`);
 });
-
-// response.json({
-//   success: true,
-//   payload: result, // Wrap the data in a `payload` object
-// });
