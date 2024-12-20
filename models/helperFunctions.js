@@ -19,10 +19,20 @@ export async function findPopulationByDate(targetYear) {
 }
 
 //MVP 3: POST request.
- const newInfo = {
+const newInfo = [
+  {
     date: "2019",
     value: 1407745000,
-}
+  },
+  {
+    date: "2017",
+    value: 1396215000,
+  },
+  {
+    date: "2016",
+    value: 1387790000,
+  },
+];
 
 export async function createInfo(newInfo) {
   const newObject = {
@@ -33,5 +43,5 @@ export async function createInfo(newInfo) {
   let updatedData = [...dataArray, newObject];
 
   // Return the updated data to be saved in the POST handler
-  return updatedData;  
+  return updatedData;
 }
