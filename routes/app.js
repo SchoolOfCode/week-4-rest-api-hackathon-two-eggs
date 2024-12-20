@@ -39,7 +39,7 @@ app.get("/:date", async function (req, res) {
     const popByDate = await findPopulationByDate(date);
     res.json({
       success: true,
-      payload: `The population in ${date} was ${popByDate}`,
+      payload: `The Chinese population in ${date} was ${popByDate}`,
     });
   } catch (error) {
     res.status(404).json({ error: "Could not retrieve data" });

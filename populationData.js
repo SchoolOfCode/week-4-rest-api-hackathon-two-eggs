@@ -16,7 +16,7 @@ export const data = [
     "value": 1411100000
   },
   {
-    "date": "2019",
+    "date": "2018",
     "value": 1407745000
-  },
+  }
 ];

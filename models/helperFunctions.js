@@ -1,9 +1,7 @@
 // Import the data from "./populationData.js"
 import { data } from "../populationData.js";
-// Import ID generator module ()
-import { v4 as uuidv4 } from "uuid";
 
-// Creates an array of all the objects
+// Creates a clone, modifies it and returns an updated version to populationData.js
 let dataArray = data.map((data) => ({ ...data }));
 
 // Function to return all data
@@ -21,16 +19,16 @@ export async function findPopulationByDate(targetYear) {
 //MVP 3: POST request.
 const newInfo = [
   {
-    date: "2019",
-    value: 1407745000,
+    "date": "2019",
+    "value": 1407745000,
   },
   {
-    date: "2017",
-    value: 1396215000,
+    "date": "2017",
+    "value": 1396215000,
   },
   {
-    date: "2016",
-    value: 1387790000,
+    "date": "2016",
+    "value": 1387790000,
   },
 ];
 
