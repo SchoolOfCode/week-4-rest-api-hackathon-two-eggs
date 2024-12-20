@@ -18,39 +18,20 @@ export async function findPopulationByDate(targetYear) {
   return value;
 }
 
-//MVP3 - Add an endpoint to your REST API which creates a new dataObject and returns the newly created dataObj in the /reponse body.
-// this function will return an object that will be made of year and population
-// create year and poulation variables
-// return it
+//MVP 3: POST request.
+ const newInfo = {
+    date: "2019",
+    value: 1407745000,
+}
 
 export async function createInfo(newInfo) {
   const newObject = {
     ...newInfo,
   };
 
-  dataArray = [...dataArray, newObject];
-  console.log("Data array:", dataArray);
+  // Make a copy of the dataArray, add the new object to it
+  let updatedData = [...dataArray, newObject];
 
-  return newObject;
+  // Return the updated data to be saved in the POST handler
+  return updatedData;  
 }
-
-let newObj = {
-  "date": 2080,
-  "value": 20000000
-}
-console.log("Calling the function", createInfo(newObj));
-
-// export async function findPopulationByDate(targetYear) {
-//   let dateValue;
-//   // Use a for loop to iterate through the array containing the object
-//   for (let i = 0; i < dataArray.length; i++) {
-//     // If an iteration finds a matching 'date' take said object and return the value of 'population' key
-//     // console.log(dataArray[i].value);
-//     if (parseInt(dataArray[i].date) === targetYear) {
-//       dateValue = dataArray[i].value; // Access the date of the object that matches the target year
-//       return dateValue; // Stop the loop once the year is found
-//     }
-//   }
-// }
-
-// Add an endpoint to your REST API which returns all astronauts in the response body.

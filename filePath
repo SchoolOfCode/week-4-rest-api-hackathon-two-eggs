@@ -19,4 +19,8 @@ export const data = [
     "date": "2019",
     "value": 1407745000
   },
+  {
+    "date": "300000",
+    "value": "test-1"
+  }
 ];
